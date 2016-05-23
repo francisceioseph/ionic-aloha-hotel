@@ -1,0 +1,55 @@
+<ion-view view-title="Reservation">
+  <ion-content>
+    <div class="list">
+      <div class="item item-icon-left">
+        <i class="icon ion-key"></i>
+        Room
+
+        <span class="item-note">
+          {{reservation.room}}
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-calendar"></i>
+        Ckeck-in
+
+        <span class="item-note">
+          {{reservation.checkin | date:'mediumDate'}}
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-calendar"></i>
+        Checkout
+        <span class="item-note">
+          {{reservation.checkout | date:'mediumDate'}}
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-wifi"></i>
+        Wifi
+        <span class="item-note">
+          {{reservation.wifi}}
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-pricetag"></i>
+        Rate by night
+        <span class="item-note">
+           {{ reservation.rate | currency }}
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-pricetags"></i>
+        <strong> Total </strong>
+        <span class="item-note">
+          {{reservation.rate * 7 | currency }}
+        </span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
