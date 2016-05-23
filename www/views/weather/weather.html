@@ -1,0 +1,53 @@
+<ion-view view-title="Current Weather">
+  <ion-content>
+    <div class="list">
+      <div class="item item-icon-left">
+        <i class="icon ion-ios-partlysunny"></i>
+        Weather Conditions
+        <span class="item-note">
+          {{weather.weather[0].main}}
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-thermometer"></i>
+        Temperature
+        <span class="item-note">
+          {{weather.main.temp}}&deg;
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-waterdrop"></i>
+        Humidity
+        <span class="item-note">
+          {{weather.main.humidity}}%
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-arrow-up-a"></i>
+        Today's Hight
+        <span class="item-note">
+          {{weather.main.temp_max}}&deg;
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-arrow-down-a"></i>
+        Today's Low
+        <span class="item-note">
+          {{weather.main.temp_min}}&deg;
+        </span>
+      </div>
+
+      <div class="item item-icon-left">
+        <i class="icon ion-ios-flower-outline"></i>
+        Wind
+        <span class="item-note">
+          {{weather.wind.speed}}mph, {{getDirection(weather.wind.deg)}}
+        </span>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
